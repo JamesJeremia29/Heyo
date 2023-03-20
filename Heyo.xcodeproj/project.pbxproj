@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2429161029C8A1AA00EA06A2 /* HeyoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429160F29C8A1AA00EA06A2 /* HeyoApp.swift */; };
+		2429161229C8A1AA00EA06A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429161129C8A1AA00EA06A2 /* ContentView.swift */; };
+		2429161429C8A1AB00EA06A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2429161329C8A1AB00EA06A2 /* Assets.xcassets */; };
+		2429161729C8A1AB00EA06A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2429161629C8A1AB00EA06A2 /* Preview Assets.xcassets */; };
+		2429162129C8A1AB00EA06A2 /* HeyoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429162029C8A1AB00EA06A2 /* HeyoTests.swift */; };
+		2429162B29C8A1AB00EA06A2 /* HeyoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429162A29C8A1AB00EA06A2 /* HeyoUITests.swift */; };
+		2429162D29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429162C29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2429161D29C8A1AB00EA06A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2429160429C8A1AA00EA06A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2429160B29C8A1AA00EA06A2;
+			remoteInfo = Heyo;
+		};
+		2429162729C8A1AB00EA06A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2429160429C8A1AA00EA06A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2429160B29C8A1AA00EA06A2;
+			remoteInfo = Heyo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2429160C29C8A1AA00EA06A2 /* Heyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2429160F29C8A1AA00EA06A2 /* HeyoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyoApp.swift; sourceTree = "<group>"; };
+		2429161129C8A1AA00EA06A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2429161329C8A1AB00EA06A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2429161629C8A1AB00EA06A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2429161C29C8A1AB00EA06A2 /* HeyoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2429162029C8A1AB00EA06A2 /* HeyoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyoTests.swift; sourceTree = "<group>"; };
+		2429162629C8A1AB00EA06A2 /* HeyoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2429162A29C8A1AB00EA06A2 /* HeyoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyoUITests.swift; sourceTree = "<group>"; };
+		2429162C29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2429160929C8A1AA00EA06A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2429161929C8A1AB00EA06A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2429162329C8A1AB00EA06A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2429160329C8A1AA00EA06A2 = {
+			isa = PBXGroup;
+			children = (
+				2429160E29C8A1AA00EA06A2 /* Heyo */,
+				2429161F29C8A1AB00EA06A2 /* HeyoTests */,
+				2429162929C8A1AB00EA06A2 /* HeyoUITests */,
+				2429160D29C8A1AA00EA06A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2429160D29C8A1AA00EA06A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2429160C29C8A1AA00EA06A2 /* Heyo.app */,
+				2429161C29C8A1AB00EA06A2 /* HeyoTests.xctest */,
+				2429162629C8A1AB00EA06A2 /* HeyoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2429160E29C8A1AA00EA06A2 /* Heyo */ = {
+			isa = PBXGroup;
+			children = (
+				2429160F29C8A1AA00EA06A2 /* HeyoApp.swift */,
+				2429161129C8A1AA00EA06A2 /* ContentView.swift */,
+				2429161329C8A1AB00EA06A2 /* Assets.xcassets */,
+				2429161529C8A1AB00EA06A2 /* Preview Content */,
+			);
+			path = Heyo;
+			sourceTree = "<group>";
+		};
+		2429161529C8A1AB00EA06A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2429161629C8A1AB00EA06A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2429161F29C8A1AB00EA06A2 /* HeyoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2429162029C8A1AB00EA06A2 /* HeyoTests.swift */,
+			);
+			path = HeyoTests;
+			sourceTree = "<group>";
+		};
+		2429162929C8A1AB00EA06A2 /* HeyoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2429162A29C8A1AB00EA06A2 /* HeyoUITests.swift */,
+				2429162C29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift */,
+			);
+			path = HeyoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2429160B29C8A1AA00EA06A2 /* Heyo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2429163029C8A1AB00EA06A2 /* Build configuration list for PBXNativeTarget "Heyo" */;
+			buildPhases = (
+				2429160829C8A1AA00EA06A2 /* Sources */,
+				2429160929C8A1AA00EA06A2 /* Frameworks */,
+				2429160A29C8A1AA00EA06A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Heyo;
+			productName = Heyo;
+			productReference = 2429160C29C8A1AA00EA06A2 /* Heyo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2429161B29C8A1AB00EA06A2 /* HeyoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2429163329C8A1AB00EA06A2 /* Build configuration list for PBXNativeTarget "HeyoTests" */;
+			buildPhases = (
+				2429161829C8A1AB00EA06A2 /* Sources */,
+				2429161929C8A1AB00EA06A2 /* Frameworks */,
+				2429161A29C8A1AB00EA06A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2429161E29C8A1AB00EA06A2 /* PBXTargetDependency */,
+			);
+			name = HeyoTests;
+			productName = HeyoTests;
+			productReference = 2429161C29C8A1AB00EA06A2 /* HeyoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2429162529C8A1AB00EA06A2 /* HeyoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2429163629C8A1AB00EA06A2 /* Build configuration list for PBXNativeTarget "HeyoUITests" */;
+			buildPhases = (
+				2429162229C8A1AB00EA06A2 /* Sources */,
+				2429162329C8A1AB00EA06A2 /* Frameworks */,
+				2429162429C8A1AB00EA06A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2429162829C8A1AB00EA06A2 /* PBXTargetDependency */,
+			);
+			name = HeyoUITests;
+			productName = HeyoUITests;
+			productReference = 2429162629C8A1AB00EA06A2 /* HeyoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2429160429C8A1AA00EA06A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2429160B29C8A1AA00EA06A2 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					2429161B29C8A1AB00EA06A2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2429160B29C8A1AA00EA06A2;
+					};
+					2429162529C8A1AB00EA06A2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2429160B29C8A1AA00EA06A2;
+					};
+				};
+			};
+			buildConfigurationList = 2429160729C8A1AA00EA06A2 /* Build configuration list for PBXProject "Heyo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2429160329C8A1AA00EA06A2;
+			productRefGroup = 2429160D29C8A1AA00EA06A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2429160B29C8A1AA00EA06A2 /* Heyo */,
+				2429161B29C8A1AB00EA06A2 /* HeyoTests */,
+				2429162529C8A1AB00EA06A2 /* HeyoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2429160A29C8A1AA00EA06A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2429161729C8A1AB00EA06A2 /* Preview Assets.xcassets in Resources */,
+				2429161429C8A1AB00EA06A2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2429161A29C8A1AB00EA06A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2429162429C8A1AB00EA06A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2429160829C8A1AA00EA06A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2429161229C8A1AA00EA06A2 /* ContentView.swift in Sources */,
+				2429161029C8A1AA00EA06A2 /* HeyoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2429161829C8A1AB00EA06A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2429162129C8A1AB00EA06A2 /* HeyoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2429162229C8A1AB00EA06A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2429162B29C8A1AB00EA06A2 /* HeyoUITests.swift in Sources */,
+				2429162D29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2429161E29C8A1AB00EA06A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2429160B29C8A1AA00EA06A2 /* Heyo */;
+			targetProxy = 2429161D29C8A1AB00EA06A2 /* PBXContainerItemProxy */;
+		};
+		2429162829C8A1AB00EA06A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2429160B29C8A1AA00EA06A2 /* Heyo */;
+			targetProxy = 2429162729C8A1AB00EA06A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2429162E29C8A1AB00EA06A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2429162F29C8A1AB00EA06A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2429163129C8A1AB00EA06A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heyo/Preview Content\"";
+				DEVELOPMENT_TEAM = LM2SWXFAWT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.Heyo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2429163229C8A1AB00EA06A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heyo/Preview Content\"";
+				DEVELOPMENT_TEAM = LM2SWXFAWT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.Heyo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2429163429C8A1AB00EA06A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LM2SWXFAWT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.HeyoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heyo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Heyo";
+			};
+			name = Debug;
+		};
+		2429163529C8A1AB00EA06A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LM2SWXFAWT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.HeyoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heyo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Heyo";
+			};
+			name = Release;
+		};
+		2429163729C8A1AB00EA06A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LM2SWXFAWT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.HeyoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heyo;
+			};
+			name = Debug;
+		};
+		2429163829C8A1AB00EA06A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LM2SWXFAWT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.HeyoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heyo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2429160729C8A1AA00EA06A2 /* Build configuration list for PBXProject "Heyo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2429162E29C8A1AB00EA06A2 /* Debug */,
+				2429162F29C8A1AB00EA06A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2429163029C8A1AB00EA06A2 /* Build configuration list for PBXNativeTarget "Heyo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2429163129C8A1AB00EA06A2 /* Debug */,
+				2429163229C8A1AB00EA06A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2429163329C8A1AB00EA06A2 /* Build configuration list for PBXNativeTarget "HeyoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2429163429C8A1AB00EA06A2 /* Debug */,
+				2429163529C8A1AB00EA06A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2429163629C8A1AB00EA06A2 /* Build configuration list for PBXNativeTarget "HeyoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2429163729C8A1AB00EA06A2 /* Debug */,
+				2429163829C8A1AB00EA06A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2429160429C8A1AA00EA06A2 /* Project object */;
+}
