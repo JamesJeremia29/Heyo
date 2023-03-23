@@ -14,6 +14,17 @@
 		2429162129C8A1AB00EA06A2 /* HeyoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429162029C8A1AB00EA06A2 /* HeyoTests.swift */; };
 		2429162B29C8A1AB00EA06A2 /* HeyoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429162A29C8A1AB00EA06A2 /* HeyoUITests.swift */; };
 		2429162D29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429162C29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift */; };
+		2429163C29C8BAD000EA06A2 /* CardJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429163B29C8BAD000EA06A2 /* CardJoin.swift */; };
+		249CC55E29CB33B4002E67C6 /* ProfileComponentQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CC55D29CB33B4002E67C6 /* ProfileComponentQuest.swift */; };
+		24C1982229CAA949005FC6A3 /* ProfileComponentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1982129CAA949005FC6A3 /* ProfileComponentStats.swift */; };
+		24C1982429CAACA0005FC6A3 /* ProfileComponentsBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1982329CAACA0005FC6A3 /* ProfileComponentsBadge.swift */; };
+		24FB4FC429C9D59F00C2A6FC /* ActionCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC329C9D59F00C2A6FC /* ActionCreate.swift */; };
+		24FB4FC629CA052E00C2A6FC /* TalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC529CA052E00C2A6FC /* TalkView.swift */; };
+		24FB4FC829CA0F4700C2A6FC /* ListPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC729CA0F4700C2A6FC /* ListPeople.swift */; };
+		24FB4FCA29CA885800C2A6FC /* ActionComponentTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC929CA885800C2A6FC /* ActionComponentTopic.swift */; };
+		24FB4FCC29CA893000C2A6FC /* ActionComponentLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FCB29CA893000C2A6FC /* ActionComponentLoc.swift */; };
+		24FB4FCE29CA8AF800C2A6FC /* ActionComponentMov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FCD29CA8AF800C2A6FC /* ActionComponentMov.swift */; };
+		24FB4FD029CA956D00C2A6FC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FCF29CA956D00C2A6FC /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		2429162629C8A1AB00EA06A2 /* HeyoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2429162A29C8A1AB00EA06A2 /* HeyoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyoUITests.swift; sourceTree = "<group>"; };
 		2429162C29C8A1AB00EA06A2 /* HeyoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2429163B29C8BAD000EA06A2 /* CardJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardJoin.swift; path = Heyo/CardJoin.swift; sourceTree = SOURCE_ROOT; };
+		249CC55D29CB33B4002E67C6 /* ProfileComponentQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponentQuest.swift; sourceTree = "<group>"; };
+		24C1982129CAA949005FC6A3 /* ProfileComponentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponentStats.swift; sourceTree = "<group>"; };
+		24C1982329CAACA0005FC6A3 /* ProfileComponentsBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponentsBadge.swift; sourceTree = "<group>"; };
+		24FB4FC329C9D59F00C2A6FC /* ActionCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCreate.swift; sourceTree = "<group>"; };
+		24FB4FC529CA052E00C2A6FC /* TalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkView.swift; sourceTree = "<group>"; };
+		24FB4FC729CA0F4700C2A6FC /* ListPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeople.swift; sourceTree = "<group>"; };
+		24FB4FC929CA885800C2A6FC /* ActionComponentTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionComponentTopic.swift; sourceTree = "<group>"; };
+		24FB4FCB29CA893000C2A6FC /* ActionComponentLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionComponentLoc.swift; sourceTree = "<group>"; };
+		24FB4FCD29CA8AF800C2A6FC /* ActionComponentMov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionComponentMov.swift; sourceTree = "<group>"; };
+		24FB4FCF29CA956D00C2A6FC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +118,19 @@
 			children = (
 				2429160F29C8A1AA00EA06A2 /* HeyoApp.swift */,
 				2429161129C8A1AA00EA06A2 /* ContentView.swift */,
-				2429161329C8A1AB00EA06A2 /* Assets.xcassets */,
+				2429163B29C8BAD000EA06A2 /* CardJoin.swift */,
+				24FB4FC529CA052E00C2A6FC /* TalkView.swift */,
+				24FB4FC729CA0F4700C2A6FC /* ListPeople.swift */,
 				2429161529C8A1AB00EA06A2 /* Preview Content */,
+				24FB4FC329C9D59F00C2A6FC /* ActionCreate.swift */,
+				24FB4FC929CA885800C2A6FC /* ActionComponentTopic.swift */,
+				24FB4FCB29CA893000C2A6FC /* ActionComponentLoc.swift */,
+				24FB4FCD29CA8AF800C2A6FC /* ActionComponentMov.swift */,
+				2429161329C8A1AB00EA06A2 /* Assets.xcassets */,
+				24FB4FCF29CA956D00C2A6FC /* ProfileView.swift */,
+				24C1982129CAA949005FC6A3 /* ProfileComponentStats.swift */,
+				24C1982329CAACA0005FC6A3 /* ProfileComponentsBadge.swift */,
+				249CC55D29CB33B4002E67C6 /* ProfileComponentQuest.swift */,
 			);
 			path = Heyo;
 			sourceTree = "<group>";
@@ -259,6 +292,17 @@
 			files = (
 				2429161229C8A1AA00EA06A2 /* ContentView.swift in Sources */,
 				2429161029C8A1AA00EA06A2 /* HeyoApp.swift in Sources */,
+				24C1982229CAA949005FC6A3 /* ProfileComponentStats.swift in Sources */,
+				249CC55E29CB33B4002E67C6 /* ProfileComponentQuest.swift in Sources */,
+				24FB4FD029CA956D00C2A6FC /* ProfileView.swift in Sources */,
+				24FB4FCC29CA893000C2A6FC /* ActionComponentLoc.swift in Sources */,
+				24C1982429CAACA0005FC6A3 /* ProfileComponentsBadge.swift in Sources */,
+				24FB4FCE29CA8AF800C2A6FC /* ActionComponentMov.swift in Sources */,
+				24FB4FCA29CA885800C2A6FC /* ActionComponentTopic.swift in Sources */,
+				2429163C29C8BAD000EA06A2 /* CardJoin.swift in Sources */,
+				24FB4FC629CA052E00C2A6FC /* TalkView.swift in Sources */,
+				24FB4FC829CA0F4700C2A6FC /* ListPeople.swift in Sources */,
+				24FB4FC429C9D59F00C2A6FC /* ActionCreate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
