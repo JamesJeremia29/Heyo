@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var tabPage = 1
     @State private var showingCredits = false
     @State private var room = false
+//    @State var navigate: Int? = 0
     var peace = "✌️"
     var okay = "👌"
     var thumbsUp = "👍"
@@ -22,8 +23,13 @@ struct ContentView: View {
     }
     
     var body: some View {
-        if(room != true){
+        NavigationView(){
             VStack(alignment: .leading) {
+                
+//                NavigationLink(destination: TalkView(), tag: 1, selection: $navigate) {
+//                    EmptyView()
+//                }
+
                 
                 HStack {
                     Text("Let's Play!")
@@ -36,6 +42,7 @@ struct ContentView: View {
                 Spacer()
                 TabView(selection: $tabPage) {
                     CardJoin().onTapGesture {
+//                        self.navigate = 1
                         tabPage = 2
                     }
                     .tabItem {
@@ -52,11 +59,9 @@ struct ContentView: View {
                 }.accentColor(.blue)
             }.background(Color("blueTheme"))
         }
-        else{
-            TalkView()
-        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

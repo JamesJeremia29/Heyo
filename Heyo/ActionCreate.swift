@@ -10,15 +10,17 @@ import SwiftUI
 struct ActionCreate: View {
     @State private var showingCredits = false
     
-    @State private var room = false
-    
     var peace = "✌️"
     var okay = "👌"
     var thumbsUp = "👍"
     var img : String = "\(Image(systemName: "plus.bubble"))"
     var add1 = "➕"
+    @State var navigate: Int? = 0
     
     var body: some View {
+        NavigationLink(destination: TalkView(), tag: 1, selection: $navigate) {
+            EmptyView()
+        }
         Button(add1) {
             showingCredits.toggle()
         }
@@ -29,8 +31,7 @@ struct ActionCreate: View {
             ActionComponentMov()
             Button(action: {
                 showingCredits.toggle()
-                room.toggle()
-                print(room)
+                self.navigate=1
             }, label: {
                 Text("Create").foregroundColor(Color(.white))
                     .frame(width: 361, height: 50)
@@ -41,6 +42,8 @@ struct ActionCreate: View {
         }
     }
 }
+
+
 
 struct ActionCreate_Previews: PreviewProvider {
     static var previews: some View {

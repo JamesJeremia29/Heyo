@@ -10,12 +10,19 @@ import SwiftUI
 
 struct TalkView: View {
     var peace = "✌️"
+    @State var navigate: Int?
 //    @Binding var rootIsActive : Bool
 //    @Binding var room : Bool
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
         NavigationView(){
             VStack {
+                NavigationLink(destination: ContentView(), tag: 2, selection: $navigate) {
+                    EmptyView()
+                }
                 VStack(alignment: .leading) {
                     HStack{
                         VStack{
@@ -27,6 +34,7 @@ struct TalkView: View {
                         Spacer()
                         Text(peace).font(.system(size: 50))
                     }.padding(.horizontal)
+                    
                     Spacer()
                 }.background(Color("blueTheme"))
                     .frame(height: 75)
@@ -35,16 +43,24 @@ struct TalkView: View {
                 ListPeople()
                 ListPeople()
                 Spacer()
-                Button(action: {
-//                    self.rootIsActive = false
-                }, label: {
-                    Text("Delete").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
-                        .background(Color("redTheme"))
-                        .cornerRadius(10)
-                }
-                       
-            )}
+//                Button(action: {
+//                }, label: {
+//                    Text("Delete").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
+//                        .background(Color("redTheme"))
+//                        .cornerRadius(10)
+//                }
+//
+//            )
+                
+            }
         }
+        .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                            self.mode.wrappedValue.dismiss()
+                        }){
+                            Text("\(Image(systemName: "rectangle.portrait.and.arrow.forward")) Leave").foregroundColor(Color("redTheme"))
+                                .font(.system(size: 17, weight: .bold))
+                        })
     }
 }
 
