@@ -11,6 +11,7 @@ import SwiftUI
 struct CardJoin: View {
     
     var peace = "✌️"
+//    @Binding var room : Bool
     var body: some View {
         HStack{
             VStack(alignment: .leading){

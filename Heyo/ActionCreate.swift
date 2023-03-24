@@ -10,6 +10,8 @@ import SwiftUI
 struct ActionCreate: View {
     @State private var showingCredits = false
     
+    @State private var room = false
+    
     var peace = "✌️"
     var okay = "👌"
     var thumbsUp = "👍"
@@ -17,23 +19,26 @@ struct ActionCreate: View {
     var add1 = "➕"
     
     var body: some View {
-        
         Button(add1) {
-                    showingCredits.toggle()
-                }
-                .sheet(isPresented: $showingCredits) {
-                    ActionComponentTopic()
-                    ActionComponentLoc()
-                    ActionComponentMov()
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Create").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
-                            .background(Color("greenTheme"))
-                            .cornerRadius(10)
-                    })
-                        .presentationDetents([.medium, .large])
-                }
+            showingCredits.toggle()
+        }
+        .sheet(isPresented: $showingCredits) {
+            Spacer().frame(height: 20)
+            ActionComponentTopic()
+            ActionComponentLoc()
+            ActionComponentMov()
+            Button(action: {
+                showingCredits.toggle()
+                room.toggle()
+                print(room)
+            }, label: {
+                Text("Create").foregroundColor(Color(.white))
+                    .frame(width: 361, height: 50)
+                    .background(Color("greenTheme"))
+                    .cornerRadius(10)
+            })
+                .presentationDetents([.medium, .large])
+        }
     }
 }
 

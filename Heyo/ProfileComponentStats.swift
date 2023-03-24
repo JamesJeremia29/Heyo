@@ -25,7 +25,7 @@ struct ProfileComponentStats: View {
                 }
                 Spacer()
                 VStack{
-                    Text("0").font(.system(size: 36, weight: .bold))
+                    Text("0").font(.system(size: 50, weight: .bold))
                     Text("Badge").font(.system(size: 17, weight: .medium))
                 }
                 Spacer()

@@ -8,70 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selection = 1
+    @State var tabPage = 1
     @State private var showingCredits = false
-    
+    @State private var room = false
     var peace = "✌️"
     var okay = "👌"
     var thumbsUp = "👍"
     var img : String = "\(Image(systemName: "plus.bubble"))"
-    var add1 = "✏️"
-
+    
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray4
     }
+    
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Let's Play!")
-                    .font(.system(size: 36, weight: .bold))
-                    .foregroundColor(.white)
+        if(room != true){
+            VStack(alignment: .leading) {
+                
+                HStack {
+                    Text("Let's Play!")
+                        .font(.system(size: 36, weight: .bold))
+                        .foregroundColor(.white)
+                    Spacer()
+                    ActionCreate()
+                    
+                }.padding(.all)
                 Spacer()
-                Button(add1) {
-                            showingCredits.toggle()
-                        }
-                        .sheet(isPresented: $showingCredits) {
-                            ActionComponentTopic()
-                            ActionComponentLoc()
-                            ActionComponentMov()
-                            Button(action: {
-                                
-                            }, label: {
-                                Text("Create").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
-                                    .background(Color("greenTheme"))
-                                    .cornerRadius(10)
-                            })
-                                .presentationDetents([.medium, .large])
-                        }
-//                Button {
-//                    print("")
-//                } label: {
-//                    Image(systemName: "plus.bubble")
-//                }.font(.system(size: 36, weight: .bold
-//                              ))
-//                .foregroundColor(.white)
-
-            }.padding(.all)
-            Spacer()
-            TabView(selection: $selection) {
-                CardJoin().onTapGesture {
-                    selection = 2
-                }
+                TabView(selection: $tabPage) {
+                    CardJoin().onTapGesture {
+                        tabPage = 2
+                    }
                     .tabItem {
                         Image(systemName: "gamecontroller.fill")
                         Text("Play")
                     }.tag(1)
-                VStack(spacing: 30) {
-                    ProfileView()
-                }
+                    VStack(spacing: 30) {
+                        ProfileView()
+                    }
                     .tabItem {
                         Image(systemName: "person.fill")
                         Text("Profile")
                     }.tag(2)
-            }.accentColor(.blue)
-        }.background(Color("blueTheme"))
+                }.accentColor(.blue)
+            }.background(Color("blueTheme"))
+        }
+        else{
+            TalkView()
+        }
     }
 }
 
@@ -80,3 +63,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
