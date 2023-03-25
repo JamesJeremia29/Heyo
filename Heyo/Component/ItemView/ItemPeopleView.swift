@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct ListPeople: View {
+struct ItemPeopleView: View {
+    var username: String
     var body: some View {
         VStack (alignment: .leading){
             HStack{
                 Image(systemName: "person.fill").padding(.all
                 )
-                Text("Username").padding(.all)
+                Text(username).padding(.all)
                 Spacer()
             }.frame(width: 361, height: 40)
                 .background(Color(.white))
@@ -23,8 +24,8 @@ struct ListPeople: View {
     }
 }
 
-struct ListPeople_Previews: PreviewProvider {
+struct ItemPeopleView_Previews: PreviewProvider {
     static var previews: some View {
-        ListPeople()
+        ItemPeopleView(username: "Halo")
     }
 }

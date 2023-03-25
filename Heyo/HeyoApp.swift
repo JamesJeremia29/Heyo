@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct HeyoApp: App {
+    let createRoomViewModel = CreateRoomViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            CategoryChip()
+            MainVew().environmentObject(createRoomViewModel)
         }
     }
 }

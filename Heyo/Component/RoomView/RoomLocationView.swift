@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ActionComponentLoc: View {
-    @State var inputLoc : String = ""
+struct RoomLocationView: View {
+    @EnvironmentObject var viewModel: CreateRoomViewModel
+    @Binding var inputLoc : String
     
     var body: some View {
         VStack{
@@ -20,8 +21,8 @@ struct ActionComponentLoc: View {
     }
 }
 
-struct ActionComponentLoc_Previews: PreviewProvider {
+struct RoomLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        ActionComponentLoc()
+        RoomLocationView(inputLoc: .constant("lkasdjf")).environmentObject(CreateRoomViewModel())
     }
 }

@@ -8,7 +8,11 @@
 import SwiftUI
 
 
-struct CardJoin: View {
+struct ItemRoomView: View {
+    
+    var category: String = ""
+    var location: String = ""
+    var emoticon: String = ""
     
     var peace = "✌️"
     var body: some View {
@@ -17,7 +21,7 @@ struct CardJoin: View {
                 HStack{
                     VStack{
                         HStack{
-                            Text("Sport").font(.system(size: 24, weight: .semibold))
+                            Text(category).font(.system(size: 24, weight: .semibold))
                                 .foregroundColor(.blue)
                             Spacer()
                             
@@ -25,11 +29,11 @@ struct CardJoin: View {
                         Spacer().frame(height: 20)
                         HStack{
                             Image(systemName: "mappin.and.ellipse").resizable().frame(width: 25, height: 25).foregroundColor(.red)
-                            Text("Cave").font(.system(size: 17, weight: .medium))
+                            Text(location).font(.system(size: 17, weight: .medium))
                             Spacer()
                         }
                     }
-                    Text(peace).font(.system(size: 50))
+                    Text(emoticon).font(.system(size: 50))
                 }
             }
         }
@@ -41,8 +45,8 @@ struct CardJoin: View {
     }
 }
 
-struct CardJoin_Previews: PreviewProvider {
+struct ItemRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        CardJoin()
+        ItemRoomView(category: "Sport", location: "Depok", emoticon: "✌️")
     }
 }
