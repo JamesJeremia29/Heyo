@@ -31,11 +31,7 @@ struct ProfileComponentStats: View {
                 }
                 Spacer()
                 VStack{
-<<<<<<< HEAD
                     Text("\(countBadge(numSports:numberSport, numMovies:numberMovie, numTravel:numberTravel, numFood:numberFood, numNews:numberNews))").font(.system(size: 50, weight: .bold))
-=======
-                    Text("0").font(.system(size: 50, weight: .bold))
->>>>>>> 33daea54d189d8bdd2db8a81874600bab2120979
                     Text("Badge").font(.system(size: 17, weight: .medium))
                 }
                 Spacer()

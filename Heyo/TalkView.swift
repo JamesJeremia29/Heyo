@@ -52,13 +52,6 @@ struct TalkView: View {
 //
 //            )
                 
-<<<<<<< HEAD
-            }, label: {
-                Text("Leave").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
-                    .background(Color("redTheme"))
-                    .cornerRadius(10)
-=======
->>>>>>> 33daea54d189d8bdd2db8a81874600bab2120979
             }
         }
         .navigationBarBackButtonHidden(true)
