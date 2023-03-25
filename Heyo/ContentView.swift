@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("numberSport") var numberSport: Int = 0
+    @AppStorage("numberMovie") var numberMovie: Int = 0
+    @AppStorage("numberTravel") var numberTravel: Int = 0
+    @AppStorage("numberFood") var numberFood: Int = 0
+    @AppStorage("numberNews") var numberNews: Int = 0
+    @AppStorage("numberBadge") var numberBatch: Int = 0
+    
     @State var selection = 1
     @State private var showingCredits = false
     

@@ -34,7 +34,7 @@ struct TalkView: View {
             Button(action: {
                 
             }, label: {
-                Text("Delete").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
+                Text("Leave").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
                     .background(Color("redTheme"))
                     .cornerRadius(10)
             }
