@@ -17,6 +17,7 @@ struct CardJoin: View {
     @AppStorage("numberBadge") var numberBatch: Int = 0
     
     var peace = "✌️"
+//    @Binding var room : Bool
     var body: some View {
         ScrollView {
             

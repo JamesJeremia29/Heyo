@@ -16,74 +16,64 @@ struct ContentView: View {
     @AppStorage("numberBadge") var numberBatch: Int = 0
     
     @State var selection = 1
+    @State var tabPage = 1
     @State private var showingCredits = false
-    
+    @State private var room = false
+//    @State var navigate: Int? = 0
     var peace = "✌️"
     var okay = "👌"
     var thumbsUp = "👍"
     var img : String = "\(Image(systemName: "plus.bubble"))"
-    var add1 = "✏️"
-
+    
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray4
     }
+    
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Let's Play!")
-                    .font(.system(size: 36, weight: .bold))
-                    .foregroundColor(.white)
-                Spacer()
-                Button(add1) {
-                            showingCredits.toggle()
-                        }
-                        .sheet(isPresented: $showingCredits) {
-                            ActionComponentTopic()
-                            ActionComponentLoc()
-                            ActionComponentMov()
-                            Button(action: {
-                                
-                            }, label: {
-                                Text("Create").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)
-                                    .background(Color("greenTheme"))
-                                    .cornerRadius(10)
-                            })
-                                .presentationDetents([.medium, .large])
-                        }
-//                Button {
-//                    print("")
-//                } label: {
-//                    Image(systemName: "plus.bubble")
-//                }.font(.system(size: 36, weight: .bold
-//                              ))
-//                .foregroundColor(.white)
+        NavigationView(){
+            VStack(alignment: .leading) {
+                
+//                NavigationLink(destination: TalkView(), tag: 1, selection: $navigate) {
+//                    EmptyView()
+//                }
 
-            }.padding(.all)
-            Spacer()
-            TabView(selection: $selection) {
-                CardJoin().onTapGesture {
-                    selection = 2
-                }
+                
+                HStack {
+                    Text("Let's Play!")
+                        .font(.system(size: 36, weight: .bold))
+                        .foregroundColor(.white)
+                    Spacer()
+                    ActionCreate()
+                    
+                }.padding(.all)
+                Spacer()
+                TabView(selection: $tabPage) {
+                    CardJoin().onTapGesture {
+//                        self.navigate = 1
+                        tabPage = 2
+                    }
                     .tabItem {
                         Image(systemName: "gamecontroller.fill")
                         Text("Play")
                     }.tag(1)
-                VStack(spacing: 30) {
-                    ProfileView()
-                }
+                    VStack(spacing: 30) {
+                        ProfileView()
+                    }
                     .tabItem {
                         Image(systemName: "person.fill")
                         Text("Profile")
                     }.tag(2)
-            }.accentColor(.blue)
-        }.background(Color("blueTheme"))
+                }.accentColor(.blue)
+            }.background(Color("blueTheme"))
+        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
