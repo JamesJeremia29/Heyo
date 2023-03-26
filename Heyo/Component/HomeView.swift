@@ -23,9 +23,10 @@ struct HomeView: View {
                 VStack {
                     ForEach(multipeerViewModel.listRoom){ room in
                         ItemRoomView(
-                            category: room.roomInformation?[CATEGORY_CONST] ?? "",
+                            multipeerViewModel: multipeerViewModel, category: room.roomInformation?[CATEGORY_CONST] ?? "",
                             location: room.roomInformation?[LOCATION_CONST] ?? "",
-                            emoticon: room.roomInformation?[EMOTICON_CONST] ?? ""
+                            emoticon: room.roomInformation?[EMOTICON_CONST] ?? "",
+                            peerId: room.peerId
                         ).padding(12)
                     }
                 }.tabItem {

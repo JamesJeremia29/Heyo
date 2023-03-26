@@ -11,25 +11,30 @@ import MultipeerConnectivity
 class MultipeerViewModel:NSObject, ObservableObject {
     
     @Published var listRoom: [RoomModel] = []
-    var peerId: MCPeerID
-    var session: MCSession
+    var myPeerId: MCPeerID = MCPeerID(displayName: UUID().uuidString)
+    var mySession: MCSession
     var nearbyServiceAdvertiser: MCNearbyServiceAdvertiser?
     var nearbyServiceBrowser: MCNearbyServiceBrowser?
-    final private let serviceType = "heyo-multipeer"
+    let serviceType = "hmultipeer"
     
     private var information = [
-        "deviceName": "\(UIDevice.current.name)-:",
+        "deviceName": "\(UIDevice.current.name)",
         "emoji": ":)"
     ]
     
     override init() {
-        peerId = MCPeerID(displayName: UUID().uuidString)
-        session = MCSession(peer: peerId, securityIdentity: nil, encryptionPreference: .none)
-        nearbyServiceBrowser = MCNearbyServiceBrowser(peer: peerId, serviceType: serviceType)
+//        myPeerId = MCPeerID(displayName: UIDevice().name)
+        mySession = MCSession(peer: myPeerId)
+        nearbyServiceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceType)
         super.init()
-        session.delegate = self
+        mySession.delegate = self
         nearbyServiceBrowser?.delegate = self
         nearbyServiceAdvertiser?.delegate = self
+    }
+    
+    func getListPeople(){
+        let listPeople = mySession.connectedPeers
+        print("listPeople -> \(listPeople.description)")
     }
     
     func browseRoom() {
@@ -52,7 +57,7 @@ class MultipeerViewModel:NSObject, ObservableObject {
             LOCATION_CONST : location,
             EMOTICON_CONST : emoticon
         ]
-        nearbyServiceAdvertiser = MCNearbyServiceAdvertiser(peer: peerId, discoveryInfo: roomInformation, serviceType: serviceType)
+        nearbyServiceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: roomInformation, serviceType: serviceType)
         nearbyServiceAdvertiser?.startAdvertisingPeer()
     }
     
@@ -60,11 +65,39 @@ class MultipeerViewModel:NSObject, ObservableObject {
         nearbyServiceAdvertiser?.stopAdvertisingPeer()
     }
     
+    
+    func joinRoom(peerId: MCPeerID)  {
+        print("Peer Id _> \(peerId)")
+        
+        mySession.nearbyConnectionData(forPeer: peerId) { foundData, errorData in
+            print("DATA -> \(peerId)")
+//            print("Error -> \(errorData?.localizedDescription)")
+            if let nearbyString = String(data: foundData!, encoding: .utf8) {
+                    print("Nearby connection data: \(nearbyString)")
+                }
+
+
+            self.mySession.connectPeer(peerId, withNearbyConnectionData: foundData!)
+        }
+//        do {
+//            let obtainData = try await self.mySession.nearbyConnectionData(forPeer: peerId)
+//            self.mySession.connectPeer(peerId, withNearbyConnectionData: obtainData)
+//        } catch {
+//            print("ERRROR -> \(error.localizedDescription)")
+//        }
+//        mySession.nearbyConnectionData(forPeer: peerId) { connectionData, errorData in
+//            print("DATAA -> \(connectionData?.description)")
+//            self.mySession.connectPeer(peerId, withNearbyConnectionData: connectionData!)
+//        }
+        
+    }
+    
 }
 
 extension MultipeerViewModel: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         print("Room Detected -> \(peerID)")
+        
         if(!listRoom.contains(where: {$0.peerId == peerID})){
             let newRoom = RoomModel(peerId: peerID, roomInformation: info)
             listRoom.append(newRoom)
@@ -83,7 +116,8 @@ extension MultipeerViewModel: MCNearbyServiceBrowserDelegate {
 
 extension MultipeerViewModel: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        invitationHandler(true, session)
+        print("qwerqwer")
+        invitationHandler(true, mySession)
     }
 }
 
@@ -91,31 +125,31 @@ extension MultipeerViewModel: MCSessionDelegate {
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case .connecting:
-            print("\(peerId) state: connecting")
+            print("\(peerID) state: connecting")
         case .connected:
-            print("\(peerId) state: connected")
+            print("\(peerID) state: connected")
         case .notConnected:
-            print("\(peerId) state: not connected")
+            print("\(peerID) state: not connected")
         @unknown default:
-            print("\(peerId) state: unknown")
+            print("\(peerID) state: unknown")
         }
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        
+        print("Session 1")
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
-        
+        print("Session 2")
     }
     
     func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
-        
+        print("Session 3")
     }
     
     
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
-        
+        print("Session 4")
     }
     
     

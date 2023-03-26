@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct People: Identifiable {
+struct People: Identifiable, Encodable {
     var id = UUID().uuidString
     var displayName: String
 }

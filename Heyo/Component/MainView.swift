@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainVew: View {
 
-    @StateObject private var viewModel = MultipeerViewModel()
+    @State private var viewModel = MultipeerViewModel()
     
     @State var selection = 1
     @State private var showingCredits = false

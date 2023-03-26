@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
-
+import MultipeerConnectivity
 
 struct ItemRoomView: View {
+    
+    @ObservedObject var multipeerViewModel: MultipeerViewModel
     
     var category: String = ""
     var location: String = ""
     var emoticon: String = ""
+    var peerId: MCPeerID
     
     var peace = "✌️"
     var body: some View {
@@ -37,6 +40,12 @@ struct ItemRoomView: View {
                 }
             }
         }
+        .onTapGesture {
+            multipeerViewModel.joinRoom(peerId: peerId)
+//            Task {
+//                await
+//            }
+        }
         .padding(.all)
         .frame(width: 361, height: 100, alignment: .center)
         .background(Color(.white))
@@ -47,6 +56,6 @@ struct ItemRoomView: View {
 
 struct ItemRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRoomView(category: "Sport", location: "Depok", emoticon: "✌️")
+        ItemRoomView(multipeerViewModel: MultipeerViewModel(), category: "Sport", location: "Depok", emoticon: "✌️", peerId: MCPeerID())
     }
 }
