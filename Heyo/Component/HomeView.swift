@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var multipeerViewModel: MultipeerViewModel
+    @Binding var isEnteredRoom: Bool
     @State private var tabViewSelection = 1
     
     var body: some View {
@@ -26,7 +27,8 @@ struct HomeView: View {
                             multipeerViewModel: multipeerViewModel, category: room.roomInformation?[CATEGORY_CONST] ?? "",
                             location: room.roomInformation?[LOCATION_CONST] ?? "",
                             emoticon: room.roomInformation?[EMOTICON_CONST] ?? "",
-                            peerId: room.peerId
+                            peerId: room.peerId!,
+                            isEnteredRoom: $isEnteredRoom
                         ).padding(12)
                     }
                 }.tabItem {
@@ -48,6 +50,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(multipeerViewModel: MultipeerViewModel())
+        HomeView(multipeerViewModel: MultipeerViewModel(),isEnteredRoom: .constant(false))
     }
 }

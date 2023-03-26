@@ -11,13 +11,14 @@ import MultipeerConnectivity
 struct ItemRoomView: View {
     
     @ObservedObject var multipeerViewModel: MultipeerViewModel
+    @EnvironmentObject var createRoomViewModel: CreateRoomViewModel
     
     var category: String = ""
     var location: String = ""
     var emoticon: String = ""
     var peerId: MCPeerID
+    @Binding var isEnteredRoom: Bool
     
-    var peace = "✌️"
     var body: some View {
         HStack{
             VStack(alignment: .leading){
@@ -41,10 +42,17 @@ struct ItemRoomView: View {
             }
         }
         .onTapGesture {
-            multipeerViewModel.joinRoom(peerId: peerId)
-//            Task {
-//                await
-//            }
+            isEnteredRoom = !isEnteredRoom
+            let roomInfo = [
+                CATEGORY_CONST : category,
+                LOCATION_CONST : location,
+                EMOTICON_CONST : emoticon
+            ]
+            let pickedRoom = RoomModel(
+                peerId: peerId,roomInformation: roomInfo)
+            createRoomViewModel.saveCategory(category: category)
+            createRoomViewModel.setPickedRoom(newRoom: pickedRoom) 
+            multipeerViewModel.joinRoom(foundPeerId: peerId)
         }
         .padding(.all)
         .frame(width: 361, height: 100, alignment: .center)
@@ -56,6 +64,6 @@ struct ItemRoomView: View {
 
 struct ItemRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRoomView(multipeerViewModel: MultipeerViewModel(), category: "Sport", location: "Depok", emoticon: "✌️", peerId: MCPeerID())
+        ItemRoomView(multipeerViewModel: MultipeerViewModel(), category: "Sport", location: "Depok", emoticon: "✌️", peerId: MCPeerID(),isEnteredRoom: .constant(false)).environmentObject(CreateRoomViewModel())
     }
 }

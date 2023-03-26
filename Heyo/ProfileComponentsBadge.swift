@@ -22,7 +22,8 @@ struct ProfileComponentsBadge: View {
                 Text(Image(systemName: "newspaper")).font(.system(size: 36))
                 Spacer()
             }
-        }.frame(width: 361, height: 120)
+        }.padding()
+            .frame(width: 361, height: 120)
             .background()
             .cornerRadius(10)
             .shadow(radius: 5)

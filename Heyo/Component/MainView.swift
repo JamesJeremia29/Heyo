@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainVew: View {
 
-    @State private var viewModel = MultipeerViewModel()
+    @ObservedObject private var viewModel = MultipeerViewModel()
     
     @State var selection = 1
     @State private var showingCredits = false
@@ -25,9 +25,9 @@ struct MainVew: View {
             ToolbarView(multipeerViewModel: viewModel, isEnteredRoom: $isEnteredRoom)
             Spacer()
             if isEnteredRoom {
-                TalkView(isEnteredRoom: $isEnteredRoom)
+                TalkView(multipeerViewModel: viewModel, isEnteredRoom: $isEnteredRoom)
             } else {
-                HomeView(multipeerViewModel: viewModel)
+                HomeView(multipeerViewModel: viewModel, isEnteredRoom: $isEnteredRoom)
             }
         }.background(Color("blueTheme"))
             .onAppear(perform: viewModel.browseRoom)

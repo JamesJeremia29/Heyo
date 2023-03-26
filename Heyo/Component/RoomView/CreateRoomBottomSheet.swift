@@ -21,11 +21,16 @@ struct CreateRoomBottomSheet: View {
             RoomSignatureMoveView()
             Button(action: {
                 createRoomViewModel.setLocation(newLocation: location.description)
-                viewModel.createRoom(
-                    category: createRoomViewModel.pickedCategory.name,
-                    location: createRoomViewModel.location,
-                    emoticon: createRoomViewModel.pickedSignMove.value
-                )
+                let roomInformation = [
+                    CATEGORY_CONST : createRoomViewModel.pickedCategory.name,
+                    LOCATION_CONST : createRoomViewModel.location,
+                    EMOTICON_CONST : createRoomViewModel.pickedSignMove.value
+                ]
+                let pickedRoom = RoomModel(roomInformation: roomInformation)
+                createRoomViewModel.pickedRoom = pickedRoom
+                createRoomViewModel.isHost = true
+                createRoomViewModel.saveCategory(category: createRoomViewModel.pickedCategory)
+                viewModel.createRoom(roomInformation: roomInformation)
                 isEnteredRoom = true
             }, label: {
                 Text("Create").foregroundColor(Color(.white)).font(.system(size: 24)).frame(width: 361,height: 50)

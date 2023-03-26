@@ -10,6 +10,7 @@ import SwiftUI
 struct ToolbarView: View {
     
     @ObservedObject var multipeerViewModel: MultipeerViewModel
+    @EnvironmentObject var createRoomViewModel: CreateRoomViewModel
     
     @State var isBottomSheetVisible: Bool = false
     @Binding var isEnteredRoom: Bool
@@ -49,7 +50,7 @@ struct ToolbarView: View {
     func toolbarRoom() -> some View {
         HStack {
             VStack {
-                Text("Sport")
+                Text(createRoomViewModel.pickedRoom?.roomInformation?[CATEGORY_CONST] ?? "")
                     .bold()
                     .foregroundColor(Color.white)
                     .font(.system(size: 36))
@@ -57,13 +58,13 @@ struct ToolbarView: View {
                     Image(systemName: "mappin.and.ellipse")
                         .font(.system(size: 14))
                         .foregroundColor(Color.white)
-                    Text("Cave")
+                    Text(createRoomViewModel.pickedRoom?.roomInformation?[LOCATION_CONST] ?? "")
                         .foregroundColor(Color.white)
                     
                 }
             }
             Spacer()
-            Text(PEACE_EMOT_CONST)
+            Text(createRoomViewModel.pickedRoom?.roomInformation?[EMOTICON_CONST] ?? "")
                 .font(.system(size: 36))
         }.padding(.all)
     }
@@ -71,6 +72,6 @@ struct ToolbarView: View {
 
 struct ToolbarView_Previews: PreviewProvider {
     static var previews: some View {
-        ToolbarView(multipeerViewModel: MultipeerViewModel(), isEnteredRoom: .constant(false))
+        ToolbarView(multipeerViewModel: MultipeerViewModel(), isEnteredRoom: .constant(false)).environmentObject(CreateRoomViewModel())
     }
 }
