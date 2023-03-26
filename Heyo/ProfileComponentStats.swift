@@ -29,7 +29,8 @@ struct ProfileComponentStats: View {
                 }
                 Spacer()
                 VStack{
-                    Text("\(sportCategory+movieCategory+foodCategory+travelCategory+newsCategory)").font(.system(size: 50, weight: .bold))
+                    
+                    Text("\(getAmountTopic())").font(.system(size: 50, weight: .bold))
                     Text("Topics").font(.system(size: 17, weight: .medium))
                 }
                 Spacer()
@@ -45,6 +46,15 @@ struct ProfileComponentStats: View {
             .background()
             .cornerRadius(10)
             .shadow(radius: 5)
+    }
+    
+    func getAmountTopic() -> Int {
+        let sport = sportCategory != 0 ? 1 : 0
+        let movie = movieCategory != 0 ? 1 : 0
+        let food = foodCategory != 0 ? 1 : 0
+        let travel = travelCategory != 0 ? 1 : 0
+        let news = newsCategory != 0 ? 1 : 0
+        return sport + movie + food + travel + news
     }
 }
 
