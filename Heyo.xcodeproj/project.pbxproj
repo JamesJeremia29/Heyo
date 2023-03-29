@@ -78,6 +78,7 @@
 		74730FA429CEA56900ADE282 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		74730FA929CEB74800ADE282 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		74730FAD29CECD3100ADE282 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		747C41D729D1300900373340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		74A1F61629CD36D300D6C520 /* CreateRoomBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomBottomSheet.swift; sourceTree = "<group>"; };
 		74A1F61929CD5D5F00D6C520 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		74E4D2E729CCB5BB0096B793 /* MultipeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerViewModel.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		2429160E29C8A1AA00EA06A2 /* Heyo */ = {
 			isa = PBXGroup;
 			children = (
+				747C41D729D1300900373340 /* Info.plist */,
 				74A1F61829CD5D4D00D6C520 /* Helper */,
 				74E4D2EF29CCCF450096B793 /* Component */,
 				74E4D2EC29CCCF0B0096B793 /* ViewModel */,
@@ -549,6 +551,10 @@
 				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Heyo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Please turn on your Bluetooth in order to experience the apps.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please turn on your Bluetooth in order to experience the apps.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Required to connect each other";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -580,6 +586,10 @@
 				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Heyo/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Please turn on your Bluetooth in order to experience the apps.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please turn on your Bluetooth in order to experience the apps.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Required to connect each other";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

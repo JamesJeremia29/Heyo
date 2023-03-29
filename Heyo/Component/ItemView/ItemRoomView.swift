@@ -13,6 +13,13 @@ struct ItemRoomView: View {
     @ObservedObject var multipeerViewModel: MultipeerViewModel
     @EnvironmentObject var createRoomViewModel: CreateRoomViewModel
     
+    @AppStorage("numberSport") var numberSport: Int = 0
+    @AppStorage("numberMovie") var numberMovie: Int = 0
+    @AppStorage("numberTravel") var numberTravel: Int = 0
+    @AppStorage("numberFood") var numberFood: Int = 0
+    @AppStorage("numberNews") var numberNews: Int = 0
+    @AppStorage("numberBadge") var numberBatch: Int = 0
+    
     var category: String = ""
     var location: String = ""
     var emoticon: String = ""
@@ -48,6 +55,7 @@ struct ItemRoomView: View {
                 LOCATION_CONST : location,
                 EMOTICON_CONST : emoticon
             ]
+            handlingGamification(category: category)
             let pickedRoom = RoomModel(
                 peerId: peerId,roomInformation: roomInfo)
             createRoomViewModel.saveCategory(category: category)
@@ -59,6 +67,23 @@ struct ItemRoomView: View {
         .background(Color(.white))
         .cornerRadius(10)
         .shadow(radius: 5)
+    }
+    
+    func handlingGamification(category: String){
+        switch category {
+        case CategoryEnum.Sport.name:
+            numberSport += 1
+        case CategoryEnum.Movie.name:
+            numberMovie += 1
+        case CategoryEnum.Travel.name:
+            numberTravel += 1
+        case CategoryEnum.Food.name:
+            numberFood += 1
+        case CategoryEnum.News.name:
+            numberNews += 1
+        default:
+            print("none")
+        }
     }
 }
 

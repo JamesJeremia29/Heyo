@@ -17,14 +17,18 @@ class MultipeerViewModel:NSObject, ObservableObject {
     var mySession: MCSession
     var nearbyServiceAdvertiser: MCNearbyServiceAdvertiser?
     var nearbyServiceBrowser: MCNearbyServiceBrowser?
-    let serviceType = "hi-multipeer"
+    let serviceType = "fk-lobby"
     
     override init() {
         myPeerId = MCPeerID(displayName:UIDevice().name )
+        // session start
         mySession = MCSession(peer: myPeerId, securityIdentity: nil, encryptionPreference: .required)
+//        self.nearbyServiceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: nil, serviceType: serviceType)
         self.nearbyServiceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceType)
+//        nearbyServiceAdvertiser?.startAdvertisingPeer()
         super.init()
         mySession.delegate = self
+//        nearbyServiceAdvertiser?.delegate = self
         nearbyServiceBrowser?.delegate = self
     }
     
