@@ -18,7 +18,6 @@
 		249CC55E29CB33B4002E67C6 /* ProfileComponentQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CC55D29CB33B4002E67C6 /* ProfileComponentQuest.swift */; };
 		24C1982229CAA949005FC6A3 /* ProfileComponentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1982129CAA949005FC6A3 /* ProfileComponentStats.swift */; };
 		24C1982429CAACA0005FC6A3 /* ProfileComponentsBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1982329CAACA0005FC6A3 /* ProfileComponentsBadge.swift */; };
-		24FB4FC429C9D59F00C2A6FC /* ActionCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC329C9D59F00C2A6FC /* ActionCreate.swift */; };
 		24FB4FC629CA052E00C2A6FC /* TalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC529CA052E00C2A6FC /* TalkView.swift */; };
 		24FB4FC829CA0F4700C2A6FC /* ItemPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC729CA0F4700C2A6FC /* ItemPeopleView.swift */; };
 		24FB4FCA29CA885800C2A6FC /* RoomCategoryTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB4FC929CA885800C2A6FC /* RoomCategoryTopicView.swift */; };
@@ -68,7 +67,6 @@
 		249CC55D29CB33B4002E67C6 /* ProfileComponentQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponentQuest.swift; sourceTree = "<group>"; };
 		24C1982129CAA949005FC6A3 /* ProfileComponentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponentStats.swift; sourceTree = "<group>"; };
 		24C1982329CAACA0005FC6A3 /* ProfileComponentsBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComponentsBadge.swift; sourceTree = "<group>"; };
-		24FB4FC329C9D59F00C2A6FC /* ActionCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCreate.swift; sourceTree = "<group>"; };
 		24FB4FC529CA052E00C2A6FC /* TalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkView.swift; sourceTree = "<group>"; };
 		24FB4FC729CA0F4700C2A6FC /* ItemPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPeopleView.swift; sourceTree = "<group>"; };
 		24FB4FC929CA885800C2A6FC /* RoomCategoryTopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCategoryTopicView.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		74730FA429CEA56900ADE282 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		74730FA929CEB74800ADE282 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		74730FAD29CECD3100ADE282 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		747C41D729D1300900373340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		74A1F61629CD36D300D6C520 /* CreateRoomBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomBottomSheet.swift; sourceTree = "<group>"; };
 		74A1F61929CD5D5F00D6C520 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		74E4D2E729CCB5BB0096B793 /* MultipeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerViewModel.swift; sourceTree = "<group>"; };
@@ -135,14 +132,12 @@
 		2429160E29C8A1AA00EA06A2 /* Heyo */ = {
 			isa = PBXGroup;
 			children = (
-				747C41D729D1300900373340 /* Info.plist */,
 				74A1F61829CD5D4D00D6C520 /* Helper */,
 				74E4D2EF29CCCF450096B793 /* Component */,
 				74E4D2EC29CCCF0B0096B793 /* ViewModel */,
 				74E4D2E929CCB9A70096B793 /* Model */,
 				2429160F29C8A1AA00EA06A2 /* HeyoApp.swift */,
 				2429161529C8A1AB00EA06A2 /* Preview Content */,
-				24FB4FC329C9D59F00C2A6FC /* ActionCreate.swift */,
 				2429161329C8A1AB00EA06A2 /* Assets.xcassets */,
 				24FB4FCF29CA956D00C2A6FC /* ProfileView.swift */,
 				24C1982129CAA949005FC6A3 /* ProfileComponentStats.swift */,
@@ -386,7 +381,6 @@
 				24FB4FC629CA052E00C2A6FC /* TalkView.swift in Sources */,
 				74E4D2F129CCCF730096B793 /* CategoryChip.swift in Sources */,
 				24FB4FC829CA0F4700C2A6FC /* ItemPeopleView.swift in Sources */,
-				24FB4FC429C9D59F00C2A6FC /* ActionCreate.swift in Sources */,
 				74A1F61A29CD5D5F00D6C520 /* Utils.swift in Sources */,
 				74A1F61729CD36D300D6C520 /* CreateRoomBottomSheet.swift in Sources */,
 			);
