@@ -1,0 +1,28 @@
+{
+  "source": "/Users/jamesjeremia/Downloads/Git/Heyo/Heyo/ProfileComponentStats.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Stats"
+      },
+      {
+        "comment": "",
+        "key": "%lld"
+      },
+      {
+        "comment": "",
+        "key": "Meets"
+      },
+      {
+        "comment": "",
+        "key": "Topics"
+      },
+      {
+        "comment": "",
+        "key": "Badge"
+      }
+    ]
+  },
+  "version": 1
+}

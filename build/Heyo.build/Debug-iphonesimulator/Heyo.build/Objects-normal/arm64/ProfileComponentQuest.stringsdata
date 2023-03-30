@@ -1,0 +1,36 @@
+{
+  "source": "/Users/jamesjeremia/Downloads/Git/Heyo/Heyo/ProfileComponentQuest.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Meet new people (%lld/%lld)"
+      },
+      {
+        "comment": "",
+        "key": "Discuss Sport %lld times (%lld/%lld)"
+      },
+      {
+        "comment": "",
+        "key": "Discuss Movie %lld times (%lld/%lld)"
+      },
+      {
+        "comment": "",
+        "key": "Discuss Food %lld times (%lld/%lld)"
+      },
+      {
+        "comment": "",
+        "key": "Discuss Travel %lld times (%lld/%lld)"
+      },
+      {
+        "comment": "",
+        "key": "Discuss News %lld times (%lld/%lld)"
+      },
+      {
+        "comment": "",
+        "key": "Quest"
+      }
+    ]
+  },
+  "version": 1
+}

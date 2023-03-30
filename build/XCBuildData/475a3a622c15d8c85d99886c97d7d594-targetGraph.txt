@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Heyo in Heyo, no dependencies
+HeyoTests in Heyo, depends on:
+Heyo in Heyo (explicit)
+HeyoUITests in Heyo, depends on:
+Heyo in Heyo (explicit)
